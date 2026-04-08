@@ -1,11 +1,19 @@
-import React from "react";
+import HeroBanner from "@/components/Home/HeroBanner";
+import Highlights from "@/components/Home/Highlights";
+import HighlightsTwo from "@/components/Home/HighlightsTwo";
+import HowItWorks from "@/components/Home/HowItWorks";
+import Usage from "@/components/Home/Usage";
 
-const page = () => {
+const Page = () => {
   return (
     <div>
-      <h2>this is home page</h2>
+      <HeroBanner />
+      <Highlights />
+      <Usage />
+      <HighlightsTwo />
+      <HowItWorks />
     </div>
   );
 };
 
-export default page;
+export default Page;
