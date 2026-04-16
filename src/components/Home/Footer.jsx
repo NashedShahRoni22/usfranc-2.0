@@ -1,15 +1,21 @@
 import { Mail, Phone } from "lucide-react";
 import React from "react";
-import { Field, FieldGroup, FieldLabel, FieldSet } from "../ui/field";
+import { Field, FieldGroup, FieldSet } from "../ui/field";
 import { Input } from "../ui/input";
 import { FaFacebook, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  const socialLinks = [
+    { icon: <FaXTwitter size={20} />, href: "#" },
+    { icon: <FaFacebook size={20} />, href: "#" },
+    { icon: <FaGithub size={20} />, href: "#" },
+    { icon: <FaLinkedin size={20} />, href: "#" },
+  ];
   return (
     <footer className="bg-slate-100 py-10 px-10 mt-24">
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between gap-10">
         <div>
-          <h2 className="font-bold text-2xl hover:text-[#7b5e00] transition duration-300">
+          <h2 className="font-bold text-2xl hover:text-primary transition duration-300">
             Contact Us
           </h2>
           <ul>
@@ -26,7 +32,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2 className="font-bold text-2xl hover:text-[#7b5e00] transition duration-300">
+          <h2 className="font-bold text-2xl hover:text-primary transition duration-300">
             Newsletter
           </h2>
           <p className="my-6 text-gray-500">
@@ -45,40 +51,26 @@ const Footer = () => {
                 </Field>
               </FieldGroup>
             </FieldSet>
-            <button className="px-6 py-1 rounded-r-lg rounded-l-none text-white bg-[#7b5e00] cursor-pointer">
+            <button className="px-6 py-1 rounded-r-lg rounded-l-none text-white bg-primary cursor-pointer">
               Subscribe
             </button>
           </div>
         </div>
-        <div>
-          <h2 className="font-bold text-2xl hover:text-[#7b5e00] transition duration-300">
+
+        <div className="md:col-span-12 lg:col-span-3 flex flex-col lg:items-end">
+          <h2 className="font-bold text-xl mb-6 border-l-4 border-primary lg:border-l-0 lg:border-r-4 pl-3 lg:pl-0 lg:pr-3 lg:text-right w-full">
             Follow Us
           </h2>
-          <ul className="flex gap-2 mt-6">
-            <li>
-              <FaXTwitter
-                className="hover:text-[#7b5e00] transition duration-300"
-                size={22}
-              />
-            </li>
-            <li>
-              <FaFacebook
-                className="hover:text-[#7b5e00] transition duration-300"
-                size={22}
-              />
-            </li>
-            <li>
-              <FaGithub
-                className="hover:text-[#7b5e00] transition duration-300"
-                size={22}
-              />
-            </li>
-            <li>
-              <FaLinkedin
-                className="hover:text-[#7b5e00] transition duration-300"
-                size={22}
-              />
-            </li>
+          <ul className="flex gap-4 mt-2">
+            {socialLinks.map((social, index) => (
+              <li key={index}>
+                <a
+                  href={social.href}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 shadow-sm">
+                  {social.icon}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

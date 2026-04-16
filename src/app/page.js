@@ -1,3 +1,4 @@
+import Container from "@/components/Container/Container";
 import HeroBanner from "@/components/Home/HeroBanner";
 import Highlights from "@/components/Home/Highlights";
 import HighlightsTwo from "@/components/Home/HighlightsTwo";
@@ -6,13 +7,13 @@ import Usage from "@/components/Home/Usage";
 
 const Page = () => {
   return (
-    <div>
+    <Container>
       <HeroBanner />
       <Highlights />
       <Usage />
       <HighlightsTwo />
       <HowItWorks />
-    </div>
+    </Container>
   );
 };
 

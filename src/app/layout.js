@@ -1,11 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 // import { Outfit } from "next/font/google";
-import { Oswald } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Home/Navbar";
 import Footer from "@/components/Home/Footer";
 
-const outFit = Oswald({
+const outFit = Rubik({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
