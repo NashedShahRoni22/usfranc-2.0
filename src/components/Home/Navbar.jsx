@@ -91,12 +91,12 @@ const navItems = [
   {
     type: "link",
     label: "Wallet",
-    href: "/",
+    href: "/wallet",
   },
   {
     type: "link",
     label: "Contact",
-    href: "/",
+    href: "/contact",
   },
 ];
 const socialLinks = [
